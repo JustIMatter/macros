@@ -1,18 +1,17 @@
-//Toggles autorun
+//Toggles AutoSprint
      
-    if(autowalk);
-            log(AutoSprint Off)
-            unset(autowalk);
-            keyup(sprint);
-            keyup(forward);
-            stop();
-    else;
-            log(AutoSprint On)
-            set(autowalk);
+if(autosprint);
+        log(AutoSprint Off)
+        unset(autosprint);
+        stop();
+else;
+        log(AutoSprint On)
+        set(autosprint);
+        do
             if(KEY_W)
-                do;
-                    keydown(sprint);
-                    keydown(forward);
-                while(autowalk);
-            endif;
-    endif;
+                sprint
+            else
+                unsprint
+            endif
+        until(unsprint)
+endif;
