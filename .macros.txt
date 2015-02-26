@@ -107,7 +107,7 @@ gui.bindingmode=Normal
 # By default the config name banner now shows the configs dropdown, enable this setting to use the old behaviour
 gui.configname.linkstosettings=0
 
-gui.optionsfirst=1
+gui.optionsfirst=0
 
 # Remember which binding page was used last when opening the binding GUI, otherwise always starts with the KEYS screen
 gui.rememberpage=1
@@ -221,6 +221,12 @@ script.warn.permissions.enabled=0
 #
 
 # KEY_UP
-Macro[200].Macro=$${$$<autosprint.txt>}$$
+Macro[200].Macro=$${$$<AutoSprint.txt>}$$
 Macro[200].Param=furnace
+
+# KEY_RIGHT
+Macro[205].Macro=$${$$<AutoSwitch.txt>}$$
+
+# EVENT_ONJOINGAME
+Macro[1000].Macro=$${$$<AutoLoad.txt>}$$
 

@@ -1,0 +1,7 @@
+if(@autoswitchflag);
+    exec(AutoSwitch.txt,"autoswitch");
+    exec(AutoSwitch.txt,"autoswitch");
+    log("AutoSwitch Reloaded");
+else;
+	exec(AutoSwitch.txt,"autoswitch");
+endif;

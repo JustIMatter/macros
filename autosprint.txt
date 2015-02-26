@@ -1,17 +1,17 @@
 //Toggles AutoSprint
      
 if(autosprint);
-        log(AutoSprint Off)
-        unset(autosprint);
-        stop();
+    log("AutoSprint Off")
+    unset(autosprint);
+    stop();
 else;
-        log(AutoSprint On)
-        set(autosprint);
-        do
-            if(KEY_W)
-                sprint
-            else
-                unsprint
-            endif
-        until(unsprint)
+    log("AutoSprint On")
+    set(autosprint);
+    do;
+        if(KEY_W);
+            sprint();
+        else;
+            unsprint();
+        endif;
+    until(unsprint)
 endif;

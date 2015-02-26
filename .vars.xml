@@ -3,7 +3,12 @@
     <config name="@default">
         <!-- KEY_UP -->
         <template id="200">
-            <boolean key="autowalk">0</boolean>
+            <boolean key="autosprint">0</boolean>
+        </template>
+        <!-- KEY_RIGHT -->
+        <template id="205">
+            <boolean key="pressed">0</boolean>
+            <string key="currentitem">8</string>
         </template>
     </config>
 </variables>
