@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <variables>
-    <config name="@default"/>
+    <config name="@default">
+        <!-- KEY_UP -->
+        <template id="200">
+            <boolean key="autowalk">0</boolean>
+        </template>
+    </config>
 </variables>

@@ -221,7 +221,6 @@ script.warn.permissions.enabled=0
 #
 
 # KEY_UP
-Macro[200].Macro=$$<autocraft.txt>
-Macro[200].Override=1
+Macro[200].Macro=$${$$<autosprint.txt>}$$
 Macro[200].Param=furnace
 
