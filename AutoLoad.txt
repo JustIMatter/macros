@@ -5,3 +5,5 @@ if(@autoswitchflag);
 else;
 	exec(AutoSwitch.txt,"autoswitch");
 endif;
+
+exec(ArmorHUD.txt,"armorhud");
