@@ -3,7 +3,11 @@
     <config name="@default">
         <!-- KEY_RIGHT -->
         <template id="205">
+<<<<<<< HEAD
             <string key="currentitem">8</string>
+=======
+            <string key="currentitem">1</string>
+>>>>>>> origin/master
         </template>
     </config>
 </variables>

@@ -1,0 +1,40 @@
+do;
+    // Armor HUD
+   
+    &armorpiece[] = split(" ","helmet chest legs boots");
+
+    #armorpiecedura[] = split(" ","%HELMDURABILITY% %CHESTPLATEDURABILITY% %LEGGINGSDURABILITY% %BOOTSDURABILITY%");
+
+    #armorpieceinc = "0"
+
+    // For each armor piece
+    foreach(&armorpiece,&cforarmor);
+        // Pick durability waypoints based on armor piece
+        if(%&cforarmor% = "helmet");
+                #durawaypoint[] = split(" ","56 75 147 219 291");
+        elseif(%&cforarmor% = "chest");
+                #durawaypoint[] = split(" ","50 108 213 318 423");
+        elseif(%&cforarmor% = "legs");
+                #durawaypoint[] = split(" ","50 100 200 300 495");
+        elseif(%&cforarmor% = "boots");
+                #durawaypoint[] = split(" ","50 89 174 259 344");
+        endif;
+       
+        // If this piece > this waypoint
+        if(%#armorpiecedura[%#armorpieceinc%]% >= %#durawaypoint[4]%);
+                &armorcolor[%#armorpieceinc%] = "&a"
+        elseif(%#armorpiecedura[%#armorpieceinc%]% >= %#durawaypoint[3]%);
+                &armorcolor[%#armorpieceinc%] = "&2"
+        elseif(%#armorpiecedura[%#armorpieceinc%]% >= %#durawaypoint[2]%);
+                &armorcolor[%#armorpieceinc%] = "&6"
+        elseif(%#armorpiecedura[%#armorpieceinc%]% >= %#durawaypoint[1]%);
+                &armorcolor[%#armorpieceinc%] = "&c"
+        elseif(%#armorpiecedura[%#armorpieceinc%]% <= %#durawaypoint[0]%);
+                &armorcolor[%#armorpieceinc%] = "&4"
+        endif;
+
+        inc(#armorpieceinc);
+    next;
+
+    setlabel(armordura,"%&armorcolor[0]%Helmet: %HELMDURABILITY%\n%&armorcolor[1]%Chest: %CHESTPLATEDURABILITY%\n%&armorcolor[2]%Legs: %LEGGINGSDURABILITY%\n%&armorcolor[3]%Boots: %BOOTSDURABILITY%");
+loop;
