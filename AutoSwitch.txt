@@ -26,6 +26,7 @@ else;
                             else;
                                 if((HIT = "PLAYER") || (HIT = "ENTITY"));
                                     pick("wooden_sword","stone_sword","iron_sword","golden_sword","diamond_sword");
+                                    wait(3);
                                     set(pressed);
                                 else;
                                     if(%HITID% = "monster_egg");
