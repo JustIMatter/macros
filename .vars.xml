@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <variables>
     <config name="@default">
-        <!-- KEY_UP -->
-        <template id="200">
-            <boolean key="autosprint">0</boolean>
-        </template>
         <!-- KEY_RIGHT -->
         <template id="205">
-            <boolean key="pressed">0</boolean>
             <string key="currentitem">8</string>
         </template>
     </config>
